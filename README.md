@@ -1,2 +1,3 @@
 # laba1
-https://github.com/user-attachments/assets/b3d0cf8b-1975-442c-9d59-0a5e74cd5408
+https://github.com/user-attachments/assets/54d15a26-1e45-4597-a450-2c37f240f290
+
