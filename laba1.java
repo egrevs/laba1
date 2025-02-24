@@ -4,33 +4,47 @@ import static java.lang.Math.*;
 
 public class laba1 {
     public static void main(String[] args) {
-        int counter = 0;
+        int arrayPSize = 0;
+        long[] p = new long[countArrayPSize(arrayPSize)];
+        fillingPArray(p);
+
+        System.out.println();
+
+        double[] x = new double[19];
+        countArrayX(x);
+
+        System.out.println();
+
+        double[][] h = new double[10][19];
+        countArrayH(h, x, p);
+
+    }
+
+    public static int countArrayPSize(int arrayPSize) {
         for (int i = 0; i <= 19; i++) {
             if (i % 2 == 1) {
-                counter++;
+                arrayPSize++;
             }
         }
+        return arrayPSize;
+    }
 
-        long[] p = new long[counter];
+    public static void fillingPArray(long[] p) {
         for (int i = 0; i < p.length; i++) {
             p[i] = i * 2L + 1;
             System.out.print(p[i] + ", ");
         }
+    }
 
-        System.out.println();
-        System.out.println();
 
-        double[] x = new double[19];
+    public static void countArrayX(double[] x) {
         for (int i = 0; i < x.length; i++) {
             x[i] = (Math.random() * 17) - 4;
             System.out.print(x[i] + ", ");
         }
+    }
 
-        System.out.println();
-        System.out.println();
-
-
-        double[][] h = new double[10][19];
+    public static void countArrayH(double[][] h, double[] x, long[] p) {
 
         for (int i = 0; i < h.length; i++) {
             for (int j = 0; j < h[i].length; j++) {
@@ -50,5 +64,5 @@ public class laba1 {
             System.out.println(" ");
         }
     }
-}
 
+}
