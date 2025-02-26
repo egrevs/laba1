@@ -4,23 +4,25 @@ import static java.lang.Math.*;
 
 public class laba1 {
     public static void main(String[] args) {
-        int arrayPSize = 0;
-        long[] p = new long[countArrayPSize(arrayPSize)];
+        long[] p = new long[countArrayPSize()];
         fillingPArray(p);
 
         System.out.println();
+        System.out.println();
 
         double[] x = new double[19];
-        countArrayX(x);
+        fillingArrayX(x);
 
+        System.out.println();
         System.out.println();
 
         double[][] h = new double[10][19];
-        countArrayH(h, x, p);
+        fillingArrayH(h, x, p);
 
     }
 
-    public static int countArrayPSize(int arrayPSize) {
+    public static int countArrayPSize() {
+        int arrayPSize = 0;
         for (int i = 0; i <= 19; i++) {
             if (i % 2 == 1) {
                 arrayPSize++;
@@ -37,14 +39,14 @@ public class laba1 {
     }
 
 
-    public static void countArrayX(double[] x) {
+    public static void fillingArrayX(double[] x) {
         for (int i = 0; i < x.length; i++) {
             x[i] = (Math.random() * 17) - 4;
             System.out.print(x[i] + ", ");
         }
     }
 
-    public static void countArrayH(double[][] h, double[] x, long[] p) {
+    public static void fillingArrayH(double[][] h, double[] x, long[] p) {
 
         for (int i = 0; i < h.length; i++) {
             for (int j = 0; j < h[i].length; j++) {
